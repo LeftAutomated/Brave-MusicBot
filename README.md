@@ -1,4 +1,4 @@
-# Brave-Bot
+# Brave-MusicBot
 
 Brave-MusicBot is a music Discord bot for Brave Cougars 
 
