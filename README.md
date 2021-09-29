@@ -21,7 +21,6 @@ Make config.json file for prefix and token:
 ```
 {
     "token": "Your login token",
-    "prefix": "$"
 }
 ```
 
@@ -30,6 +29,13 @@ Make config.json file for prefix and token:
 Run this command in the terminal to activate the bot
 ```
 node .
+```
+
+Enable applications.commands in scope
+
+Install slash commands
+```
+!install
 ```
 
 ## Contributing

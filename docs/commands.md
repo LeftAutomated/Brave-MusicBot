@@ -1,7 +1,7 @@
 # Commands
 
-Prefix `!`
+Prefix `/`
 
 ## The `play` command
 __No arguments__
-> !play
+> /play
