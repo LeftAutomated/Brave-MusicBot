@@ -10,7 +10,7 @@ module.exports = {
         },
     ],
     async execute(interaction, player){
-        //Handling scenarios
+
         if(!interaction.member.voice.channelId)
             return await interaction.reply({
                 content: "Why you not in VC -_-",
@@ -22,7 +22,6 @@ module.exports = {
                 ephemeral: true, 
             });
 
-        //Define query and queue
         const query = interaction.options.get("query").value;
         const queue = player.createQueue(interaction.guild, {
             metadata:{
@@ -30,7 +29,6 @@ module.exports = {
             },
         });
 
-        //Verifying connection
         try{
             if(!queue.connection)
                 await queue.connect(interaction.member.voice.channel);
@@ -58,7 +56,7 @@ module.exports = {
         queue.play(track);
 
         return await interaction.followUp({
-            content: `Loading track **${track.title}`,
+            content: `Loading track **${track.title}**`,
         });
     },
 }
