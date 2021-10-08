@@ -2,14 +2,18 @@
 
 Brave-MusicBot is a music Discord bot for Brave Cougars 
 
-## Installation
-Download NodeJS v16.6+
-<br />
-NodeJS:  https://nodejs.org/en/
+## **Local Hosting**
 
-Download this repo in the terminal of your desired directory
+Download **NodeJS v16.6+** at https://nodejs.org/en/
+
+Download this repo in your desired directory
 ```
 git clone https://github.com/LeftAutomated/Brave-MusicBot.git
+```
+
+Change to the cloned directory
+```
+cd Brave-MusicBot
 ```
 
 Install node dependencies:
@@ -17,26 +21,53 @@ Install node dependencies:
 npm install
 ```
 
-Make config.json file for prefix and token:
-```
-{
-    "token": "Your login token",
-}
-```
-
-## Usage
+Change `.env.sample` to `.env` file
+and edit **TOKEN**
 
 Run this command in the terminal to activate the bot
 ```
 node .
 ```
 
-Enable applications.commands in scope
+## **Server Hosting** (24/7 for free)
 
-Install slash commands
+Create a repl at https://replit.com
+<br />
+Template: Node.js
+
+Download this repo in the shell
 ```
-!install
+git clone https://github.com/LeftAutomated/Brave-MusicBot.git
 ```
+
+**Make sure to pull all the files and folders out from Brave-Bot folder**
+
+Install node dependencies in the shell:
+```
+npm install node@16
+```
+Add **Secrets** (environmental variables)
+<br />
+
+**Bot Token**
+
+> Key: TOKEN 
+
+> Value: YOURTOKEN
+
+Use the **Run** button to activate the bot and server
+
+Copy the url (ends with .repl.co)
+
+Create a monitor at https://replit.com
+
+> Monitor Type: HTTP(s)
+
+> Friendly Name: ANY NAME
+
+> URL: PASTE URL (ends with .repl.co)
+
+Check the email contact for monitor alerts
 
 ## Contributing
 
