@@ -1,5 +1,3 @@
-const { execute } = require("./pause");
-
 module.exports = {
     name: 'skip',
     description: 'Skip a song',

@@ -6,6 +6,8 @@
     "discord-player": "^5.1.0",
     "discord-ytdl-core": "^5.0.4",
     "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "ffmpeg-static": "^4.4.0",
     "fs": "^0.0.1-security",
     "libsodium-wrappers": "^0.7.9",
@@ -14,5 +16,25 @@
     "tiny-typed-emitter": "^2.1.0",
     "youtube-sr": "^4.1.7",
     "ytdl-core": "^4.9.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "brave-musicbot",
+  "description": "Brave-MusicBot is a music Discord bot for Brave Cougars",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeftAutomated/Brave-MusicBot.git"
+  },
+  "author": "Bryant Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeftAutomated/Brave-MusicBot/issues"
+  },
+  "homepage": "https://github.com/LeftAutomated/Brave-MusicBot#readme"
 }

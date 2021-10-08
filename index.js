@@ -1,9 +1,14 @@
 //Imports
-const { Client, Collection, Intents, Interaction } = require('discord.js');
-const { token } = require('./config.json');
+const { Client, Collection, Intents} = require('discord.js');
 const { Player } = require('discord-player');
 const date = require('date-and-time');
 const fs = require('fs');
+const keepAlive = require('./server');
+
+//Configuration
+require('dotenv').config();
+
+const token = process.env.TOKEN;
 
 //Defining Client
 const client = new Client({
@@ -35,7 +40,7 @@ client.on('ready', () => {
     console.log('Brave-MusicBot is online.');
     const now = new Date();
     date.format(now, 'YYYY/MM/DD HH:mm:ss');
-    //client.channels.cache.get("889981160246099968").send(`Brave-MusicBot is online at ${now}`);
+    client.channels.cache.get("889981160246099968").send(`Brave-MusicBot is online at ${now}`);
     client.user.setActivity("with people's ears", {type: "PLAYING"});
 });
 
@@ -78,6 +83,9 @@ client.on("interactionCreate", async (interaction) =>{
     }
 
 });
+
+//Host server
+keepAlive();
 
 //Authorizing
 client.login(token);
