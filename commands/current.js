@@ -1,8 +1,7 @@
 module.exports = {
-    name: "pause",
-    description: "Pause song",
+    name: 'current',
+    description: 'Display current song',
     async execute(interaction, player){
-
         if(!interaction.member.voice.channelId)
             return await interaction.reply({
                 content: "Why you not in VC -_-",
@@ -13,7 +12,7 @@ module.exports = {
                 content: "Why you not in the same VC -_-", 
                 ephemeral: true, 
             });
-        
+
         await interaction.deferReply();
 
         const queue = player.getQueue(interaction.guildId);
@@ -22,11 +21,29 @@ module.exports = {
             return await interaction.followUp({ 
                 content: "No song is playing noob", 
             });
+
+        const elapsedTime = queue.createProgressBar();
+        const isLooped = (queue.repeatMode) ? "Looped" : "Not Looped";
         
-        const currentSong = queue.current;
-        const isPaused = queue.setPaused(true);
         return await interaction.followUp({
-            content: isPaused ? `Song **${currentSong}** is paused` : "Stupid pause not working",
+            embeds: [
+                {
+                    title: 'Current Song',
+                    description: `**${queue.current.title}**`,
+                    fields: [
+                        {
+                            name: `\u200b`,
+                            value: `${elapsedTime}`
+                        },
+                        {
+                            name: '\u200b',
+                            value: `${isLooped}`
+                        }
+                    ],
+                    color: 0x36393F,
+                }
+            ]
         });
-    },
+
+    }
 }

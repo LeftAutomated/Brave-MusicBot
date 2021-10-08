@@ -22,6 +22,8 @@ module.exports = {
                 ephemeral: true, 
             });
 
+        await interaction.deferReply();
+
         const query = interaction.options.get("query").value;
         const queue = player.createQueue(interaction.guild, {
             metadata:{
@@ -42,21 +44,19 @@ module.exports = {
             });
         }
 
-        await interaction.deferReply();
-
         const track = await player.search(query, {
             requestedBy: interaction.user
         }).then(x => x.tracks[0]);
 
         if(!track)
             return await interaction.followUp({
-                content: `Track **${query}** nonexistent -_-`,
+                content: `Song **${query}** nonexistent -_-`,
             });
             
         queue.play(track);
 
         return await interaction.followUp({
-            content: `Loading track **${track.title}**`,
+            content: `Loading song **${track.title}**`,
         });
     },
 }

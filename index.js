@@ -26,12 +26,16 @@ player.on("trackStart", (queue, track) => {
     queue.metadata.channel.send(`I am playing **${track.title}** for you noobs.`);
 });
 
+player.on('botDisconnect', queue => {
+  queue.metadata.send('I was kicked, STOP KICK ME');
+});
+
 //Client Event Handling
 client.on('ready', () => {
     console.log('Brave-MusicBot is online.');
     const now = new Date();
     date.format(now, 'YYYY/MM/DD HH:mm:ss');
-    client.channels.cache.get("889981160246099968").send(`Brave-MusicBot is online at ${now}`);
+    //client.channels.cache.get("889981160246099968").send(`Brave-MusicBot is online at ${now}`);
     client.user.setActivity("with people's ears", {type: "PLAYING"});
 });
 

@@ -21,12 +21,12 @@ module.exports = {
 
         if(!queue || !queue.playing)
             return await interaction.followUp({ 
-                content: "No song is playing noob", 
+                content: "No song to skip noob", 
             });
         const currentTrack = queue.current;
         const isSkipped = queue.skip();
         return await interaction.followUp({
-            content: isSkipped ? `Track **${currentTrack}** is skipped` : "Stupid skip not working",
+            content: isSkipped ? `Song **${currentTrack}** is skipped` : "Stupid skip not working",
         });
     }
 }

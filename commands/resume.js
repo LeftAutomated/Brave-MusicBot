@@ -26,7 +26,7 @@ module.exports = {
         const currentTrack = queue.current;
         const isResumed = queue.setPaused(false);
         return await interaction.followUp({
-            content: isResumed ? `Track **${currentTrack}** is resumed` : "Stupid resume not working",
+            content: isResumed ? `Song **${currentTrack}** is resumed` : "Stupid resume not working",
         });
     },
 }
