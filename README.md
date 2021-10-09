@@ -1,6 +1,6 @@
-# Brave-MusicBot
+# CoCo-MusicBot
 
-Brave-MusicBot is a music Discord bot for Brave Cougars 
+CoCo-MusicBot is a music Discord bot for Code Coogs
 
 ## **Local Hosting**
 
@@ -8,12 +8,12 @@ Download **NodeJS v16.6+** at https://nodejs.org/en/
 
 Download this repo in your desired directory
 ```
-git clone https://github.com/LeftAutomated/Brave-MusicBot.git
+git clone https://github.com/LeftAutomated/CoCo-MusicBot.git
 ```
 
 Change to the cloned directory
 ```
-cd Brave-MusicBot
+cd CoCo-MusicBot
 ```
 
 Install node dependencies:
@@ -37,10 +37,10 @@ Template: Node.js
 
 Download this repo in the shell
 ```
-git clone https://github.com/LeftAutomated/Brave-MusicBot.git
+git clone https://github.com/LeftAutomated/CoCo-MusicBot.git
 ```
 
-**Make sure to pull all the files and folders out from Brave-Bot folder**
+**Make sure to pull all the files and folders out from CoCo-Bot folder**
 
 Install node dependencies in the shell:
 ```
