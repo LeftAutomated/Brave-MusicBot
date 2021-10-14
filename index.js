@@ -37,10 +37,10 @@ player.on('botDisconnect', queue => {
 
 //Client Event Handling
 client.on('ready', () => {
-    console.log('Brave-MusicBot is online.');
+    console.log('CoCo-Beats is online.');
     const now = new Date();
     date.format(now, 'YYYY/MM/DD HH:mm:ss');
-    client.channels.cache.get("889981160246099968").send(`Brave-MusicBot is online at ${now}`);
+    client.channels.cache.get("889981160246099968").send(`CoCo-Beats is online at ${now}`);
     client.user.setActivity("with people's ears", {type: "PLAYING"});
 });
 
@@ -56,11 +56,11 @@ client.on('messageCreate', async message =>{
         await message.guild.commands
             .set(client.commands)
             .then(() => {
-                message.reply('Virus Installed');
+                message.reply('Seashells installed.');
             })
             .catch(error => {
                 console.error(error);
-                message.reply('You not the wizard');
+                message.reply('Noob broke it.');
             });
     }
 });

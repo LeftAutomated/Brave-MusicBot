@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 
 server.all('/', (req, res)=>{
-    res.send('Brave-MusicBot online.')
+    res.send('CoCo-Beats online.')
 })
 
 

@@ -1,6 +1,6 @@
-# CoCo-MusicBot
+# CoCo-Beats
 
-CoCo-MusicBot is a music Discord bot for Code Coogs
+CoCo-Beats is a music Discord bot for Code Coogs
 
 ## **Local Hosting**
 
@@ -8,12 +8,12 @@ Download **NodeJS v16.6+** at https://nodejs.org/en/
 
 Download this repo in your desired directory
 ```
-git clone https://github.com/LeftAutomated/CoCo-MusicBot.git
+git clone https://github.com/LeftAutomated/CoCo-Beats.git
 ```
 
 Change to the cloned directory
 ```
-cd CoCo-MusicBot
+cd CoCo-Beats
 ```
 
 Install node dependencies:
@@ -37,7 +37,7 @@ Template: Node.js
 
 Download this repo in the shell
 ```
-git clone https://github.com/LeftAutomated/CoCo-MusicBot.git
+git clone https://github.com/LeftAutomated/CoCo-Beats.git
 ```
 
 **Make sure to pull all the files and folders out from CoCo-Bot folder**
