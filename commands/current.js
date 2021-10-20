@@ -40,7 +40,7 @@ module.exports = {
                             value: `${isLooped}`
                         }
                     ],
-                    color: 0x36393F,
+                    color: 0x2F4562,
                 }
             ]
         });

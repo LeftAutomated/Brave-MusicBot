@@ -20,7 +20,7 @@ module.exports = {
             );
         }
 
-        embed.setColor('36393F');
+        embed.setColor('2F4562');
 
         return void interaction.reply({
             embeds: [embed]
